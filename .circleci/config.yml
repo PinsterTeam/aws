@@ -2,9 +2,7 @@ workflows:
   version: 2
   main:
     jobs:
-      - build:
-          context: docker_awseb
-
+      - build
 
 version: 2
 jobs:
