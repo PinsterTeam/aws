@@ -7,7 +7,7 @@ sortedVersions=( $(
 		echo "$version"
 	done | sort --reverse) )
 
-repo="cibuilds/aws:"
+repo="pinster/awseb:"
 
 # prepare file
 echo "#!/usr/bin/env bash" > build-images.sh
