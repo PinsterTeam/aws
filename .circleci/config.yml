@@ -3,7 +3,7 @@ workflows:
   main:
     jobs:
       - build:
-          context: org-global
+          context: docker_awseb
 
 
 version: 2
@@ -24,6 +24,6 @@ jobs:
           name: "Publish Docker Images (master branch only)"
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              docker login -u $DOCKER_USER -p $DOCKER_PASS
+              docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
               docker push pinster/awseb
             fi
